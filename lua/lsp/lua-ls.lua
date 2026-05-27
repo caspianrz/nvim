@@ -33,7 +33,11 @@ lsp.config('lua_ls', {
 		})
 	end,
 	settings = {
-		Lua = {}
+		Lua = {
+			diagnostics = {
+				globals = { "vim" }
+			}
+		}
 	}
 })
 
