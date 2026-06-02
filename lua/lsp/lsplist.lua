@@ -10,4 +10,6 @@ return {
 	'lua-ls',
 	'pyright',
 	'tsls',
+	'haskell',
+	'ocaml',
 }

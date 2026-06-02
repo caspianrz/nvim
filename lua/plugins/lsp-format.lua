@@ -7,7 +7,13 @@
 return {
 	'lukas-reineke/lsp-format.nvim',
 	keys = {
-		{ '<C-f>', '<CMD>lua vim.lsp.buf.format()<CR>', desc = 'Format' },
+		{
+			'<C-f>',
+			function()
+				vim.lsp.buf.format({ async = true })
+			end,
+			desc = 'Format',
+		},
 	},
 	config = true,
 }
