@@ -110,5 +110,5 @@ return { {
 	{ 'hrsh7th/cmp-nvim-lsp' },
 	{ 'hrsh7th/vim-vsnip' },
 	{ 'hrsh7th/cmp-vsnip' },
-	{ 'hrsh7th/cmp-nvim-lsp-signature-help' },
+	{ 'caspianrz/cmp-nvim-lsp-signature-help' },
 }
