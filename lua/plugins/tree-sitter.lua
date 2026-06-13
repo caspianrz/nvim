@@ -6,6 +6,7 @@
 
 return {
 	'nvim-treesitter/nvim-treesitter',
+	enabled = false, -- nvim-treesitter is archived and now has some problems.
 	branch = "master",
 	config = function()
 		require 'nvim-treesitter.configs'.setup {
@@ -26,16 +27,5 @@ return {
 				additional_vim_regex_highlighting = false,
 			},
 		}
-
-		-- For EBNF Syntax
-		require 'nvim-treesitter.parsers'.get_parser_configs().ebnf = {
-			install_info = {
-				url = 'https://github.com/RubixDev/ebnf.git',
-				files = { 'src/parser.c' },
-				location = 'crates/tree-sitter-ebnf',
-				branch = 'main',
-			},
-		}
-		vim.filetype.add { extension = { ebnf = 'ebnf' } }
 	end
 }
