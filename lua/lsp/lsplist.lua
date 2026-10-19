@@ -6,11 +6,12 @@
 
 return {
 	'clangd',
-	'cmake',
+	'neocmake',
 	'lua-ls',
 	'pyright',
 	'tsls',
 	'haskell',
 	'ocaml',
-	'css-variable-lsp'
+	'css-variable-lsp',
+	'texlab'
 }

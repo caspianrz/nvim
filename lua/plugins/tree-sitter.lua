@@ -5,37 +5,26 @@
 -- └──────────────────────────────┘
 
 return {
-	'nvim-treesitter/nvim-treesitter',
-	branch = "master",
-	config = function()
-		require 'nvim-treesitter.configs'.setup {
-			ensure_installed = {
-				'c',
-				'cpp',
-				'lua',
-				'javascript',
-				'typescript',
-				'python',
-				'cmake',
-			},
-			sync_install = false,
-			auto_install = true,
-			ignore_install = {},
-			highlight = {
-				enable = true,
-				additional_vim_regex_highlighting = false,
-			},
-		}
+    {
+        "nvim-treesitter/nvim-treesitter",
+        branch = "main",
+        lazy = false,
+        build = ":TSUpdate",
+        config = function()
+            require("nvim-treesitter").setup()
 
-		-- For EBNF Syntax
-		require 'nvim-treesitter.parsers'.get_parser_configs().ebnf = {
-			install_info = {
-				url = 'https://github.com/RubixDev/ebnf.git',
-				files = { 'src/parser.c' },
-				location = 'crates/tree-sitter-ebnf',
-				branch = 'main',
-			},
-		}
-		vim.filetype.add { extension = { ebnf = 'ebnf' } }
-	end
+            require("nvim-treesitter").install({
+                "lua",
+                "cpp",
+                "latex",
+            })
+
+            vim.api.nvim_create_autocmd("FileType", {
+                callback = function(args)
+                    pcall(vim.treesitter.start, args.buf)
+                end,
+            })
+        end,
+    },
 }
+
