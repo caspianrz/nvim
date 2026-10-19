@@ -16,6 +16,7 @@ keymap('v', '>', '>gv', opts)
 
 keymap('n', 'gd', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
 keymap('n', 'gD', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+keymap('n', 'xf', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
 
 keymap('n', '<A-k>', 'ddkP', opts)
 keymap('n', '<A-Up>', 'ddkP', opts)

@@ -12,4 +12,5 @@ return {
 	'tsls',
 	'haskell',
 	'ocaml',
+	'css-variable-lsp'
 }
