@@ -1,0 +1,41 @@
+-- ┌──────────┐
+-- │ ┬┌┐┌┬┌┬┐ │
+-- │ │││││ │  │
+-- │ ┴┘└┘┴ ┴  │
+-- └──────────┘
+
+-- Setup theme
+vim.cmd('colorscheme zellner')
+
+-- Setup General Keymapping
+require('keymaps')
+
+-- Setup Lazy
+require('lazy-setup')
+
+-- Include LSP
+require('lsp')
+
+-- Options
+local options = {
+	backup = false,
+	clipboard = 'unnamedplus',
+	ignorecase = true,
+	shiftwidth = 4,
+	tabstop = 4,
+	number = true,
+	relativenumber = true,
+	numberwidth = 4,
+	signcolumn = 'yes',
+	autoindent = false,
+	smartindent = true,
+}
+
+for k, v in pairs(options) do
+	vim.opt[k] = v
+end
+
+vim.diagnostic.config({
+	virtual_text = true,
+	underline = true
+})
