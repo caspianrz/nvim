@@ -10,12 +10,6 @@ vim.cmd('colorscheme zellner')
 -- Setup General Keymapping
 require('keymaps')
 
--- Setup Lazy
-require('lazy-setup')
-
--- Include LSP
-require('lsp')
-
 -- Options
 local options = {
 	backup = false,
@@ -39,3 +33,9 @@ vim.diagnostic.config({
 	virtual_text = true,
 	underline = true
 })
+
+-- Setup Lazy
+require('lazy-setup')
+
+-- Include LSP
+require('lsp')
