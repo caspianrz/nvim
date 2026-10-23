@@ -15,7 +15,7 @@ return {
 	opts = {
 		formatters_by_ft = {
 			haskell = { 'fourmolu' },
-			cmake = { 'clang_format' },
+			cmake = { 'clang-format' },
 			cabal = { 'cabal_gild' },
 		},
 	},

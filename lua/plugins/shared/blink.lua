@@ -28,7 +28,7 @@ return {
 			},
 
 			signature = {
-				enabled = true, 
+				enabled = true,
 				window = {
 					border = 'single'
 				}
@@ -44,7 +44,7 @@ return {
 			},
 
 			fuzzy = {
-				implementation = "rust"
+				implementation = "prefer_rust_with_warning"
 			},
 		},
 	},
