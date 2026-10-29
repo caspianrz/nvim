@@ -31,6 +31,9 @@ local profiles = {
 	cpp = {
 		{ import = "plugins.cpp" },
 	},
+	python = {
+		{ import = "plugins.python" },
+	},
 }
 
 local selected = profiles[profile]
