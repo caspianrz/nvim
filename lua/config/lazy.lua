@@ -34,6 +34,9 @@ local profiles = {
 	python = {
 		{ import = "plugins.python" },
 	},
+	swift = {
+		{ import = "plugins.swift" },
+	}
 }
 
 local selected = profiles[profile]
